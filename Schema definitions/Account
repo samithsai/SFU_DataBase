@@ -1,0 +1,8 @@
+-- Account Table
+CREATE TABLE Account (
+    AccountID INT PRIMARY KEY,
+    MemberID INT,
+    AccountType VARCHAR(20),
+    Balance DECIMAL(10, 2),
+    FOREIGN KEY (MemberID) REFERENCES Members(MemberID)
+);
