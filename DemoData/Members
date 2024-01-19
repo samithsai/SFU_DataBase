@@ -1,0 +1,19 @@
+-- Inserting data into the Members table with limited and alphanumeric passwords
+INSERT INTO Members (MemberID, FirstName, LastName, Address, Password, ContactNumber, Email, StatusID)
+VALUES
+(101, 'Sri Krishna Chaitanya', 'Talasila', 'miyapur', 'aB3xZ', '1234567890', 'dbms@gmail.com', 1),
+(102, 'Samith', 'Tipirisetty', 'VNR VJIET hostel', 'cR8mK', '1234567891', 'dbms@gmail.com', 2),
+(103, 'Sandeep', 'Uchantla', 'Secunderabad', 'o2NfS', '1234567892', 'dbms@gmail.com', 1),
+(104, 'Aniketh', 'Tirupatae', 'Kairathabad', '6d3Qq', '1234567893', 'dbms@gmail.com', 2),
+(105, 'Aditya', 'Sai Ram', 'VNR VJIET hostel', '0IffH', '1234567894', 'dbms@gmail.com', 1),
+(106, 'Sathwick', 'Ram', 'VNR VJIET hostel', 'jYnP1', '1234567895', 'dbms@gmail.com', 2),
+(107, 'Vamshi', 'T', 'VNR VJIET hostel', 'r4XfE', '1234567896', 'dbms@gmail.com', 1),
+(108, 'Pavan', 'Varigala', 'VNR VJIET hostel', 'zJ2mW', '1234567897', 'dbms@gmail.com', 2),
+(109, 'Arjun', 'Reddy', 'VNR VJIET hostel', 'bQ0wr', '1234567898', 'dbms@gmail.com', 1),
+(110, 'Akhil', 'Sai Teja', 'VNR VJIET hostel', 'yG7sL', '1234567899', 'dbms@gmail.com', 2),
+(111, 'Sai Sushanth', 'T', 'Secunderabad', 'gE4mA', '1234567900', 'dbms@gmail.com', 1),
+(112, 'Hari', 'Lekkala', 'KPHB', 'sS3ye', '1234567901', 'dbms@gmail.com', 2),
+(113, 'Srineel', 'Reddy', 'JNTU', 'hO4Z1', '1234567902', 'dbms@gmail.com', 1),
+(114, 'Hemanth', 'kumar', 'Dilshukhnagar', 'dJyAk', '1234567903', 'dbms@gmail.com', 2),
+(115, 'Srujan', 'Sohan', 'Patancheru', '2.00tW', '1234567904', 'dbms@gmail.com', 1),
+(116, 'Mayan', 'Brahmam', 'VNR VJIET hostel', '1C2kP', '1234567905', 'dbms@gmail.com', 2);
