@@ -1,0 +1,19 @@
+-- Inserting data into the FinancialTransactions table with four-digit TransactionID
+INSERT INTO FinancialTransactions (TransactionID, AccountID, TransactionType, Status, Amount, TransactionDate)
+VALUES
+(1001, 10001, 'Deposit', 'SUCCESS', 1000.00, '2022-01-01'),
+(1002, 10002, 'Withdrawal', 'SUCCESS', 500.00, '2022-01-02'),
+(1003, 10003, 'Transfer', 'SUCCESS', 200.00, '2022-01-03'),
+(1004, 10004, 'Deposit', 'FAILURE', 300.00, '2022-01-04'),
+(1005, 10005, 'Withdrawal', 'SUCCESS', 700.00, '2022-01-05'),
+(1006, 10006, 'Transfer', 'FAILURE', 150.00, '2022-01-06'),
+(1007, 10007, 'Deposit', 'SUCCESS', 800.00, '2022-01-07'),
+(1008, 10008, 'Withdrawal', 'SUCCESS', 400.00, '2022-01-08'),
+(1009, 10009, 'Transfer', 'SUCCESS', 1000.00, '2022-01-09'),
+(1010, 10010, 'Deposit', 'FAILURE', 120.00, '2022-01-10'),
+(1011, 10011, 'Withdrawal', 'SUCCESS', 300.00, '2022-01-11'),
+(1012, 10012, 'Transfer', 'SUCCESS', 900.00, '2022-01-12'),
+(1013, 10013, 'Deposit', 'FAILURE', 1500.00, '2022-01-13'),
+(1014, 10014, 'Withdrawal', 'SUCCESS', 600.00, '2022-01-14'),
+(1015, 10015, 'Transfer', 'SUCCESS', 800.00, '2022-01-15'),
+(1016, 10016, 'Deposit', 'FAILURE', 200.00, '2022-01-16');
