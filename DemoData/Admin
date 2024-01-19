@@ -1,0 +1,5 @@
+-- Inserting data into the Admin table
+INSERT INTO Admin (AdminID, AdminUsername, AdminPassword, FirstName, LastName, Email, ContactNumber)
+VALUES
+(1, 'AnikethTriupate', 'admin_password_1', 'Aniketh', 'Triupate', 'aniketh@example.com', '1234567890'),
+(2, 'SriKrishna', 'admin_password_2', 'Sri Krishna', 'Chaitanya', 'srikrishna@example.com', '9876543210');
