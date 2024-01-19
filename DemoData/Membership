@@ -1,0 +1,5 @@
+-- Inserting data into the MembershipStatus table
+INSERT INTO MembershipStatus (StatusID, StatusName)
+VALUES
+(1, 'Active'),
+(2, 'Inactive');
