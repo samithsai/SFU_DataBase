@@ -1,0 +1,65 @@
+-- Query 1: List all customers (members) with their account type and balance:
+SELECT m.FirstName, m.LastName, a.AccountType, a.Balance
+FROM Members m
+JOIN Account a ON m.MemberID = a.MemberID;
+
+-- Query 2: Retrieve the total balance for each account type:
+SELECT AccountType, SUM(Balance) AS TotalBalance FROM Account
+GROUP BY AccountType;
+
+-- Query 3: Find the latest transaction for each account:
+SELECT a.AccountID, a.AccountType, ft.TransactionType, ft.Amount, ft.TransactionDate
+FROM Account a
+LEFT JOIN FinancialTransactions ft ON a.AccountID = ft.AccountID
+WHERE ft.TransactionDate = (
+    SELECT MAX(TransactionDate)
+    FROM FinancialTransactions
+    WHERE AccountID = a.AccountID
+);
+
+-- Query 4: List members who haven't performed any financial transactions:
+SELECT m.FirstName, m.LastName
+FROM Members m
+LEFT JOIN Account a ON m.MemberID = a.MemberID
+LEFT JOIN FinancialTransactions ft ON a.AccountID = ft.AccountID
+WHERE ft.TransactionID IS NULL;
+
+-- Query 5: Find the average balance for each account type:
+SELECT AccountType, AVG(Balance) AS AverageBalance
+FROM Account
+GROUP BY AccountType; 
+
+-- Query 6: Retrieve the top 5 members with the highest total transaction amounts:
+SELECT m.FirstName, m.LastName, SUM(ft.Amount) AS TotalTransactionAmount
+FROM Members m
+JOIN Account a ON m.MemberID = a.MemberID
+JOIN FinancialTransactions ft ON a.AccountID = ft.AccountID
+GROUP BY m.MemberID
+ORDER BY TotalTransactionAmount DESC
+LIMIT 5;
+
+-- Query 7: Find the number of transactions per account type:
+SELECT a.AccountType, COUNT(ft.TransactionID) AS TransactionCount
+FROM Account a
+LEFT JOIN FinancialTransactions ft ON a.AccountID = ft.AccountID
+GROUP BY a.AccountType;
+
+-- Query 8: List members who have a balance greater than the average balance:
+SELECT m.FirstName, m.LastName, a.Balance
+FROM Members m
+JOIN Account a ON m.MemberID = a.MemberID
+WHERE a.Balance > (
+    SELECT AVG(Balance)
+    FROM Account
+);
+
+-- Query 9: Retrieve the earliest and latest transaction dates for each account:
+SELECT a.AccountID, MIN(ft.TransactionDate) AS EarliestTransaction, MAX(ft.TransactionDate) AS LatestTransaction
+FROM Account a
+LEFT JOIN FinancialTransactions ft ON a.AccountID = ft.AccountID
+GROUP BY a.AccountID;
+
+-- Query 10: List members who have the same last name and different first names:
+SELECT m1.FirstName AS FirstName1, m1.LastName, m2.FirstName AS FirstName2
+FROM Members m1
+JOIN Members m2 ON m1.LastName = m2.LastName AND m1.FirstName <> m2.FirstName;
