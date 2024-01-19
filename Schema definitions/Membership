@@ -1,0 +1,5 @@
+-- MembershipStatus table to specify membership statuses
+CREATE TABLE MembershipStatus (
+    StatusID INT PRIMARY KEY,
+    StatusName VARCHAR(20) UNIQUE
+);
