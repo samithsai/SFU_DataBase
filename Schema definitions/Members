@@ -1,0 +1,12 @@
+-- Members Table
+CREATE TABLE Members (
+    MemberID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Address VARCHAR(255),
+    Password VARCHAR(255),
+    ContactNumber VARCHAR(20),
+    Email VARCHAR(100),
+    StatusID INT,
+    FOREIGN KEY (StatusID) REFERENCES MembershipStatus(StatusID)
+);
