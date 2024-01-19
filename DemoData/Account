@@ -1,0 +1,19 @@
+-- Inserting data into the Account table with 5-digit AccountID
+INSERT INTO Account (AccountID, MemberID, AccountType, Balance)
+VALUES
+(10001, 101, 'Savings', 1000.00),
+(10002, 102, 'Checking', 500.00),
+(10003, 103, 'Savings', 1200.00),
+(10004, 104, 'Checking', 800.00),
+(10005, 105, 'Savings', 1500.00),
+(10006, 106, 'Checking', 700.00),
+(10007, 107, 'Savings', 800.00),
+(10008, 108, 'Checking', 2000.00),
+(10009, 109, 'Savings', 1200.00),
+(10010, 110, 'Checking', 900.00),
+(10011, 111, 'Savings', 500.00),
+(10012, 112, 'Checking', 1500.00),
+(10013, 113, 'Savings', 1800.00),
+(10014, 114, 'Checking', 1000.00),
+(10015, 115, 'Savings', 2000.00),
+(10016, 116, 'Checking', 1200.00);
