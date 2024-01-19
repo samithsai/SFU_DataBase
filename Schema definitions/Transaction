@@ -1,0 +1,10 @@
+-- Transaction Table
+CREATE TABLE Transaction (
+    TransactionID INT PRIMARY KEY,
+    AccountID INT,
+    TransactionType VARCHAR(20),
+    Status VARCHAR(10),
+    Amount DECIMAL(10, 2),
+    TransactionDate TIMESTAMP,
+    FOREIGN KEY (AccountID) REFERENCES Account(AccountID)
+);
