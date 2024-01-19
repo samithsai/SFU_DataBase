@@ -1,0 +1,10 @@
+-- Admin Table
+CREATE TABLE Admin (
+    AdminID INT PRIMARY KEY,
+    AdminUsername VARCHAR(50),
+    AdminPassword VARCHAR(255),
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Email VARCHAR(100),
+    ContactNumber VARCHAR(20)
+);
